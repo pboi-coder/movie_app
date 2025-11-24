@@ -1,0 +1,30 @@
+<%- include('partials/header') %>
+
+<h1 class="mt-4">Movie Collection</h1>
+
+<a href="/add" class="btn btn-primary my-3">Add Movie</a>
+
+<table class="table table-dark">
+  <tr>
+    <th>Title</th>
+    <th>Genre</th>
+    <th>Year</th>
+    <th>Rating</th>
+    <th>Actions</th>
+  </tr>
+
+  <% movies.forEach(movie => { %>
+  <tr>
+    <td><%= movie.title %></td>
+    <td><%= movie.genre %></td>
+    <td><%= movie.year %></td>
+    <td><%= movie.rating %></td>
+    <td>
+      <a href="/edit/<%= movie._id %>" class="btn btn-warning btn-sm">Edit</a>
+      <a href="/delete/<%= movie._id %>" class="btn btn-danger btn-sm">Delete</a>
+    </td>
+  </tr>
+  <% }) %>
+</table>
+
+<%- include('partials/footer') %>

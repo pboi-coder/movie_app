@@ -1,0 +1,13 @@
+<%- include('partials/header') %>
+
+<h1>Edit Movie</h1>
+
+<form method="POST">
+  <input class="form-control my-2" name="title" value="<%= movie.title %>">
+  <input class="form-control my-2" name="genre" value="<%= movie.genre %>">
+  <input class="form-control my-2" name="year" value="<%= movie.year %>">
+  <input class="form-control my-2" name="rating" value="<%= movie.rating %>">
+  <button class="btn btn-warning">Update</button>
+</form>
+
+<%- include('partials/footer') %>
